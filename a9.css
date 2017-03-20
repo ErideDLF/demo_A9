@@ -1,0 +1,15 @@
+@import "./node_modules/compass-mixins/lib/_animate";
+@import "./node_modules/compass-mixins/lib/_compass";
+
+
+@import "./src/core/components/sass/normalize.scss";
+@import "./src/core/components/sass/typography-resets.scss";
+@import "./src/core/components/sass/core.scss";
+@import "./src/core/components/sass/smooth-transition.scss";
+
+
+@import "./src/a9/components/mainNavBar/MainNavBar.scss";
+@import "./src/a9/components/home/Home.scss";
+@import "./src/a9/components/inputBox/InputBox.scss";
+@import "./src/a9/components/itemCard/ItemCard.scss";
+@import "./src/a9/components//resultsList/ResultsList.scss";

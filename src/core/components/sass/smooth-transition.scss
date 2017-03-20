@@ -1,0 +1,32 @@
+//
+//	Smooth background color transition
+//	Usage:
+//		.element {
+//		  	@include smooth-background-color-transition("background-color");
+//			or with specific time
+//			@include smooth-background-color-transition("background-color", 2s);
+//			or with specific key
+//			@include smooth-background-color-transition("background-color", "default");
+//		  	... ejemplo dos propiedades cada una con su duracion:
+//			@include smooth-transition((background-color, width),(0.5s, 0.2s));
+// 			@include smooth-transition((top, color,font-size), (0.3s, 0.3s, 0.3s), (ease, ease, ease));
+//		}
+//
+
+@mixin smooth-transition($properties, $duration: default, $ease: linear){
+
+	$map: (
+	"fast": 0.2s,
+	"default": 0.4s,
+	"long": 0.6s,
+	"veryLong": 1.5s,
+	);
+
+	@if map-has-key($map, $duration) {
+		$duration: map-get($map, $duration);
+	}
+
+	@include transition-property($properties);
+	@include transition-duration($duration);
+	@include transition-timing-function($ease);
+}

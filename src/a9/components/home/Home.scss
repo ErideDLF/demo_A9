@@ -1,0 +1,31 @@
+html, body {
+  height: 100%;
+}
+
+.ui-a9-home{
+  @include display-flex();
+  @include align-items(center);
+  @include flex-direction(column);
+  width: 100%;
+  height: 100%;
+  min-height: 500px;
+  background-color: #f0f0f0;
+  padding: 15px 0px;
+}
+
+.ui-a9-search-header{
+  @include display-flex();
+  @include align-items(center);
+  @include justify-content(center);
+  @include flex-direction(row);
+  width: 60%;
+  min-width: 500px;
+
+}
+
+.ui-a9-home-bottom{
+    @include display-flex();
+    @include align-items(center);
+    @include justify-content(center);
+    @include flex-direction(row);
+}

@@ -1,0 +1,102 @@
+.ui-a9-item-card {
+  @include display-flex();
+  @include flex-direction(row);
+  width: 97%;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  padding: 5px 10px;
+  border-left-width: 8px;
+  border-left-style: solid;
+  background-color: #fff;
+  margin-top: 5px;
+  margin-right: auto;
+  margin-left: auto;
+
+  .ui-a9-item-card-avatar{
+    @include display-flex();
+    @include flex-direction(column);
+    margin-right: 5px;
+    .ui-a9-item-card-avatar-img{
+      width: 100px;;
+      height: 100px;
+    }
+    .ui-a9-item-card-avatar-score{
+      color: #827717;
+      font-size: 1.7em;
+      padding-top: 5px;
+    }
+  }
+
+  .ui-a9-item-card-info{
+    @include display-flex();
+    @include flex-direction(column);
+    @include calc(width, "100% - 55px");
+    height: 100%;
+    .ui-a9-item-card-row{
+      @include display-flex();
+      @include align-items(left);
+      @include flex-direction(column);
+      flex-wrap: nowrap;
+      padding: 5px 10px;
+      color: #000000;
+      font-weight: 400;
+      position: relative;
+      min-height: 50px;
+      height: 100%;
+
+      &.ui-a9-item-card-border-row{
+        @include flex-direction(column);
+        border-bottom: 1px solid #bfbfbf;
+      }
+
+      .ui-a9-item-card-inner-wrapper{
+        @include display-flex();
+        @include align-items(left);
+        @include flex-direction(column);
+        position: absolute;
+      }
+    }
+  }
+
+}
+
+
+
+.ui-a9-activity-car-hidden {
+  display: none;
+}
+
+.ui-a9-item-card-title{
+  font-size: 0.7em;
+  color: #bfbfbf;
+}
+
+.ui-a9-item-card-text{
+  font-size: 0.8em;
+}
+
+.ui-a9-item-card-link{
+  cursor: pointer;
+}
+
+
+
+/*****************************
+*         TEMPLATES          *
+*****************************/
+
+.ui-a9-activity-car-type-0{
+  border-left-color: #9e9d24;
+}
+.ui-a9-activity-car-type-1{
+  border-left-color: #91c9ec;
+}
+.ui-a9-activity-car-type-2{
+  border-left-color: #88bcad;
+}
+.ui-a9-activity-car-type-3{
+  border-left-color: #fba600;
+}
+.ui-a9-activity-car-type-4{
+  border-left-color: #737373;
+}

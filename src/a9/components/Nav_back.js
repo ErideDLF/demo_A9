@@ -1,0 +1,36 @@
+import React from 'react';
+import { NavLink } from 'fluxible-router';
+import BaseComponent from '../../core/components/BaseComponent';
+
+export default class Nav extends BaseComponent {
+    renderBaseComponent() {
+        const selected = this.props.currentRoute;
+        const links = this.props.links;
+
+        const linkHTML = Object.keys(links).map((name) => {
+            var className = '';
+            var link = links[name];
+
+            if (selected && selected.name === name) {
+                className = 'pure-menu-selected';
+            }
+
+            return (
+                <li className={className} key={link.path}>
+                    <NavLink routeName={link.page} activeStyle={{backgroundColor: '#eee'}}>{link.title}</NavLink>
+                </li>
+            );
+        });
+
+        return (
+            <ul className="pure-menu pure-menu-open pure-menu-horizontal">
+                {linkHTML}
+            </ul>
+        );
+    }
+}
+
+Nav.defaultProps = {
+    selected: null,
+    links: {}
+};

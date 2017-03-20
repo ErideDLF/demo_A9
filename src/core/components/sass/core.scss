@@ -1,0 +1,26 @@
+/* CSS3 calc() function to perform calculations */
+@mixin calc($property, $expression) {
+  #{$property}: -webkit-calc(#{$expression});
+  #{$property}: -moz-calc(#{$expression});
+  #{$property}: calc(#{$expression});
+} 
+
+
+.float-left{
+    float: left;
+}
+.float-right{
+    float: right;
+}
+
+.align-left{
+    left: 0px;
+}
+
+.align-right{
+    right: 5px;
+}
+
+.clearfix{
+    clear: both;
+}
