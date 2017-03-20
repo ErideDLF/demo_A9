@@ -28,6 +28,14 @@ npm run watch-win
 ```
 Este nos arrancará el proyecto en modo **desarrollo**.
 
+## Ejecución de Tests
+
+Para ejecutar los tests (Se ha añadido un ejemplo sobre el componente InputBox), se debe hacer uso del siguiente comando:
+
+```
+npm run test
+```
+
 ## Navegador:
 
 Para visualizar la aplicación, desde el navegador escribimos la siguiente url:
